@@ -1,6 +1,6 @@
 require("dotenv").config();
 
-const { App } = require("@slack/bolt");
+import { App } from "@slack/bolt";
 
 const app = new App({
   token: process.env.SLACK_BOT_TOKEN,
@@ -12,7 +12,7 @@ app.command("/sassy-ping", async ({ command, ack, respond }) => {
   const start = Date.now();
   await ack();
   const latency = Date.now() - start;
-  await respond({ text: `I was busy doing nothing 🙄.` });
+  await respond({ text: `Pong!\nLatency: ${latency}ms` });
 });
 
 (async () => {
