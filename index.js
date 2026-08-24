@@ -22,7 +22,7 @@ app.command("/sassy", async ({ command, ack, respond }) => {
   console.log("bot is running!");
 })();
 
-app.command("/sassy-catfact", async ({ ack, respond }) => {
+app.command("/sassyfact", async ({ ack, respond }) => {
   await ack();
 
   try {
@@ -33,7 +33,7 @@ app.command("/sassy-catfact", async ({ ack, respond }) => {
   }
 });
 
-app.command("/sassy-joke", async ({ ack, respond }) => {
+app.command("/sassyjoke", async ({ ack, respond }) => {
   await ack();
 
   try {
