@@ -14,7 +14,7 @@ app.command("/sassy", async ({ command, ack, respond }) => {
   const start = Date.now();
   await ack();
   const latency = Date.now() - start;
-  await respond({ text: `What do you want?🙄\nLatency: ${latency}ms` });
+  await respond({ text: `What do you want?🫩\nLatency: ${latency}ms` });
 });
 
 (async () => {
