@@ -27,7 +27,7 @@ app.command("/sassyfact", async ({ ack, respond }) => {
 
   try {
     const response = await axios.get("https://catfact.ninja/fact");
-    await respond({ text: `Here's a cat fact since you wanted one🙄:\n${response.data.fact}` });
+    await respond({ text: `Here's a cat fact since you wanted one🙄:\n${response.data.fact} \nLatency: ${latency}ms` });
   } catch (err) {
     await respond({ text: "Failed to fetch a cat fact." });
   }
